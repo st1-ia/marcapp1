@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+
+<html class="light scroll-smooth" lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>MarcApp - Agencia Web Premium</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <!-- Google Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap"
+        rel="stylesheet" />
+    <!-- Material Symbols -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <!-- Theme Config -->
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0f66bd",
+                        "primary-dark": "#0a4a8c",
+                        "secondary": "#64748b",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                        "surface-light": "#ffffff",
+                        "surface-dark": "#1e293b",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"],
+                        "sans": ["Inter", "sans-serif"],
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings:
+                'FILL' 0,
+                'wght' 400,
+                'GRAD' 0,
+                'opsz' 24
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white min-h-screen flex flex-col font-display antialiased selection:bg-primary selection:text-white">
+    <!-- Top Navigation -->
+    <header
+        class="sticky top-0 z-50 w-full bg-white/90 dark:bg-background-dark/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <div class="flex items-center gap-3">
+                    <div
+                        class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center text-white shadow-lg shadow-primary/30">
+                        <span class="material-symbols-outlined text-2xl">rocket_launch</span>
+                    </div>
+                    <span class="text-xl font-bold tracking-tight text-slate-900 dark:text-white">MarcApp</span>
+                </div>
+                <!-- Desktop Menu -->
+                <nav class="hidden md:flex items-center gap-8">
+                    <a class="text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary transition-colors"
+                        href="#services">Servicios</a>
+                    <a class="text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary transition-colors"
+                        href="#portfolio">Portafolio</a>
+                    <a class="text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary transition-colors"
+                        href="#pricing">Precios</a>
+                    <a class="text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary transition-colors"
+                        href="#contact">Contacto</a>
+                </nav>
+                <!-- CTA Button -->
+                <div class="hidden md:flex">
+                    <a href="#whatsapp-section"
+                        class="bg-primary hover:bg-primary-dark text-white text-sm font-bold py-2.5 px-6 rounded-lg transition-all shadow-md hover:shadow-lg active:scale-95">
+                        Cotizar
+                    </a>
+                </div>
+                <!-- Mobile Menu Button -->
+                <button
+                    class="md:hidden p-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg">
+                    <span class="material-symbols-outlined">menu</span>
+                </button>
+            </div>
+        </div>
+    </header>
+    <main class="flex-grow">
+        <!-- Hero Section -->
+        <section class="relative bg-background-dark overflow-hidden">
+            <!-- Abstract Background Pattern -->
+            <div class="absolute inset-0 opacity-20"
+                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAPDYfLIKdJkEyCe6i3g7Gl0Valk9UUIsy58vhfkFhy-nSnzDYpeyxzaitfX3GIxbbBH0BX71rj9Na4r7IHS-mDEpBIqQJBr-0gNLO2DLyKLRUcRp8pdx0wrNmon7vPdU1QWnFBZW9pZ0xTFor85FQ9VOQE_nqHuPHZLRcGqy6N_phbbyiY4tMq3ygIci5D_7Myz5sCyoHg6-BD7QlBzqlUyJLRUwz8l05e59m7pM5vAIycSE2hqqS3sIOqQqUFnR7OPXBDWlp8uTh2'); background-size: cover; background-position: center;">
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-br from-slate-900/90 via-slate-900/80 to-primary/30"
+                data-alt="Abstract dark blue tech gradient background"></div>
+            <div
+                class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32 flex flex-col items-center text-center">
+                <span
+                    class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/20 text-white text-xs font-semibold uppercase tracking-wider mb-6 backdrop-blur-sm">
+                    <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
+                    Agencia Digital Premium
+                </span>
+                <h1
+                    class="text-4xl md:text-6xl lg:text-7xl font-black text-white tracking-tight leading-tight mb-6 max-w-4xl">
+                    MarcApp - La Web <br />
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-200 to-blue-500">para tu
+                        marca</span>
+                </h1>
+                <p class="text-lg md:text-xl text-slate-300 max-w-2xl mb-10 font-light leading-relaxed">
+                    Diseño, Desarrollo y Marketing Digital. Elevamos tu presencia online con estrategias que convierten
+                    y diseños que impactan.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+                    <a href="#whatsapp-section"
+                        class="bg-primary hover:bg-primary-dark text-white text-base font-bold h-12 px-8 rounded-lg transition-all shadow-lg hover:shadow-primary/50 flex items-center justify-center gap-2">
+                        <span>Cotizar Proyecto</span>
+                        <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                    </a>
+                    <a href="#portfolio"
+                        class="bg-white/10 hover:bg-white/20 text-white border border-white/20 text-base font-medium h-12 px-8 rounded-lg transition-all backdrop-blur-sm flex items-center justify-center">
+                        Ver Portafolio
+                    </a>
+                </div>
+                <!-- Stats/Trust Indicators -->
+                <!-- Stats section removed -->
+            </div>
+        </section>
+        <!-- Services Section -->
+        <section class="py-24 bg-white dark:bg-background-dark" id="services">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-4">Nuestros Servicios
+                    </h2>
+                    <p class="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">Soluciones integrales para hacer
+                        crecer tu negocio en el entorno digital.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Service 1 -->
+                    <div
+                        class="group p-8 rounded-xl border border-slate-100 dark:border-slate-800 bg-white dark:bg-slate-900 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                        <div
+                            class="w-12 h-12 bg-blue-50 dark:bg-blue-900/20 text-primary rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                            <span class="material-symbols-outlined text-3xl">brush</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Diseño Web</h3>
+                        <p class="text-slate-600 dark:text-slate-400 leading-relaxed">Interfaces modernas, atractivas y
+                            centradas en la experiencia de usuario (UI/UX) para cautivar a tu audiencia.</p>
+                    </div>
+                    <!-- Service 2 -->
+                    <div
+                        class="group p-8 rounded-xl border border-slate-100 dark:border-slate-800 bg-white dark:bg-slate-900 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                        <div
+                            class="w-12 h-12 bg-blue-50 dark:bg-blue-900/20 text-primary rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                            <span class="material-symbols-outlined text-3xl">code</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Desarrollo Web</h3>
+                        <p class="text-slate-600 dark:text-slate-400 leading-relaxed">Sitios robustos, rápidos y
+                            escalables utilizando las últimas tecnologías del mercado.</p>
+                    </div>
+                    <!-- Service 3 -->
+                    <div
+                        class="group p-8 rounded-xl border border-slate-100 dark:border-slate-800 bg-white dark:bg-slate-900 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                        <div
+                            class="w-12 h-12 bg-blue-50 dark:bg-blue-900/20 text-primary rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                            <span class="material-symbols-outlined text-3xl">devices</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Diseño Responsivo</h3>
+                        <p class="text-slate-600 dark:text-slate-400 leading-relaxed">Adaptación perfecta a cualquier
+                            dispositivo: móviles, tablets y ordenadores de escritorio.</p>
+                    </div>
+                    <!-- Service 4 -->
+                    <div
+                        class="group p-8 rounded-xl border border-slate-100 dark:border-slate-800 bg-white dark:bg-slate-900 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                        <div
+                            class="w-12 h-12 bg-blue-50 dark:bg-blue-900/20 text-primary rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                            <span class="material-symbols-outlined text-3xl">diamond</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Branding Digital</h3>
+                        <p class="text-slate-600 dark:text-slate-400 leading-relaxed">Identidad visual impactante que
+                            transmite los valores y la esencia de tu marca.</p>
+                    </div>
+                    <!-- Service 5 -->
+                    <div
+                        class="group p-8 rounded-xl border border-slate-100 dark:border-slate-800 bg-white dark:bg-slate-900 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                        <div
+                            class="w-12 h-12 bg-blue-50 dark:bg-blue-900/20 text-primary rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                            <span class="material-symbols-outlined text-3xl">campaign</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Marketing Digital</h3>
+                        <p class="text-slate-600 dark:text-slate-400 leading-relaxed">Estrategias de crecimiento,
+                            gestión de redes sociales y publicidad online efectiva.</p>
+                    </div>
+                    <!-- Service 6 -->
+                    <div
+                        class="group p-8 rounded-xl border border-slate-100 dark:border-slate-800 bg-white dark:bg-slate-900 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                        <div
+                            class="w-12 h-12 bg-blue-50 dark:bg-blue-900/20 text-primary rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                            <span class="material-symbols-outlined text-3xl">trending_up</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Optimización SEO</h3>
+                        <p class="text-slate-600 dark:text-slate-400 leading-relaxed">Posicionamiento orgánico en
+                            buscadores para que tus clientes te encuentren primero.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Portfolio Section -->
+        <section class="py-24 bg-background-light dark:bg-slate-950" id="portfolio">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+                    <div>
+                        <h2 class="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-4">Portafolio
+                            Reciente</h2>
+                        <p class="text-slate-600 dark:text-slate-400 max-w-xl">Explora nuestros últimos proyectos y
+                            descubre cómo ayudamos a las marcas a destacar.</p>
+                    </div>
+                    <!-- Portfolio filters removed -->
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Portfolio Item 1 -->
+                    <div
+                        class="group relative rounded-xl overflow-hidden bg-white dark:bg-slate-900 shadow-lg cursor-pointer">
+                        <div class="aspect-[4/3] w-full overflow-hidden">
+                            <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                data-alt="Modern clean corporate website dashboard on laptop screen"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAHkiARGT6ofeDo_u3Izlxc46lXO7aL8XE2mVMo0FACRfktD1s39wBDWxMuS80Xbbj0jpjBgdT3XrPgxMi8UJmvHcEO4rIiLZt384t3AxhMICd3VEB8YzGGIpaPUMgE46z5KFVb1L8I4s2uQinBcVN0dRlzoONFhbLeg9_A3OMOzFo31ePOAzThuehxZ0fTOAJ3wGDadk3sGm6Zn4l6H69Xvfl1qQswz9rtrLYW1hc80Tl1NQM5F9YMGopjmvfUEtwHSquODp5D1Art" />
+                        </div>
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                            <span class="text-primary font-bold text-sm mb-1 uppercase tracking-wider">Sitio
+                                Corporativo</span>
+                            <h3 class="text-white text-xl font-bold">FinTech Solutions</h3>
+                        </div>
+                    </div>
+                    <!-- Portfolio Item 2 -->
+                    <div
+                        class="group relative rounded-xl overflow-hidden bg-white dark:bg-slate-900 shadow-lg cursor-pointer">
+                        <div class="aspect-[4/3] w-full overflow-hidden">
+                            <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                data-alt="E-commerce payment interface on mobile device"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEijo2fAgQl0nX1LDWAIy6xxfojrMCrdoSOBREDeuCe5ueKZz_pWKhFKTXsV4dWFmVndBXW3GpfcibBj7RuHAJtHoMi1xMDAwjbD995dCWvug3eY2kS-T5uAbzSnAzXtQ2476-tzTN3fuorRb6ySopuxXJmgayOApbzPn7q_RZzLpuER6IjQRSMenmWj0JTYG-EoTer5XwrxVtx0u_gpPrmwmVrlxvTihI2hS4toOf2oRQzmTIZOZ9V6pNR_fctR9Hjcfu4lAccKrI" />
+                        </div>
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                            <span class="text-primary font-bold text-sm mb-1 uppercase tracking-wider">E-Commerce</span>
+                            <h3 class="text-white text-xl font-bold">Tienda ModaStyle</h3>
+                        </div>
+                    </div>
+                    <!-- Portfolio Item 3 -->
+                    <div
+                        class="group relative rounded-xl overflow-hidden bg-white dark:bg-slate-900 shadow-lg cursor-pointer">
+                        <div class="aspect-[4/3] w-full overflow-hidden">
+                            <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                data-alt="Creative agency portfolio website design mockup"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-9v284NW4_WAmGJGMGswygIgm2G2W8raiGOOt2k7xccd0GEc6Hg4JEx-yd2g2PW3RFQwE6Rg8X4XMocxqFx9WBFHrWdPmcXwxsO4oZRxBotu-hyIjPnaDvjTYIKEm3Ja0fKfebHytzEhdDTzbWjcPdY2PMPM5LHmSwZsMQGUc-Xm_cIT2EyODhcypbr57wceh7q4hGLgC63y2RYiLabYNSfNMAa7nyD7jpT-BpSbeaM3TDpAPjXEtk8yCJ-atfHaKHGowKormIkFd" />
+                        </div>
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                            <span class="text-primary font-bold text-sm mb-1 uppercase tracking-wider">Branding</span>
+                            <h3 class="text-white text-xl font-bold">Agencia Creativa</h3>
+                        </div>
+                    </div>
+                </div>
+                <!-- View all projects button removed -->
+            </div>
+        </section>
+        <!-- Pricing Section -->
+        <section class="py-24 bg-white dark:bg-background-dark" id="pricing">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-4">Planes y Precios</h2>
+                    <p class="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">Elige el plan perfecto para las
+                        necesidades de tu empresa.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+                    <!-- Standard Plan -->
+                    <div
+                        class="p-8 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl hover:shadow-lg transition-shadow">
+                        <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Standard</h3>
+                        <p class="text-slate-500 text-sm mb-6">Ideal para pequeños negocios.</p>
+                        <div class="text-4xl font-bold text-slate-900 dark:text-white mb-6">$4.95<span
+                                class="text-lg font-normal text-slate-500">/mensual</span></div>
+                        <button
+                            class="w-full py-3 px-4 bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-900 dark:text-white font-bold rounded-lg transition-colors mb-8">Elegir
+                            Plan</button>
+                        <ul class="space-y-4 text-sm text-slate-600 dark:text-slate-400">
+                            <li class="flex items-center gap-3"><span
+                                    class="material-symbols-outlined text-green-500 text-xl">check_circle</span> Diseño
+                                Responsivo</li>
+                            <li class="flex items-center gap-3"><span
+                                    class="material-symbols-outlined text-green-500 text-xl">check_circle</span> Hasta 5
+                                Secciones</li>
+                            <li class="flex items-center gap-3"><span
+                                    class="material-symbols-outlined text-green-500 text-xl">check_circle</span>
+                                Formulario de Contacto</li>
+                            <li class="flex items-center gap-3"><span
+                                    class="material-symbols-outlined text-slate-300 text-xl">cancel</span> SEO Avanzado
+                            </li>
+                            <li class="flex items-center gap-3"><span
+                                    class="material-symbols-outlined text-slate-300 text-xl">cancel</span> E-Commerce
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Gold Plan (Highlighted) -->
+                    <div
+                        class="relative p-8 bg-white dark:bg-slate-900 border-2 border-primary rounded-xl shadow-xl transform md:-translate-y-4 z-10">
+                        <div
+                            class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-primary text-white px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wide">
+                            Más Popular</div>
+                        <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Gold</h3>
+                        <p class="text-slate-500 text-sm mb-6">Para empresas en crecimiento.</p>
+                        <div class="text-4xl font-bold text-slate-900 dark:text-white mb-6">$6.95<span
+                                class="text-lg font-normal text-slate-500">/mensual</span></div>
+                        <button
+                            class="w-full py-3 px-4 bg-primary hover:bg-primary-dark text-white font-bold rounded-lg transition-colors mb-8 shadow-md">Elegir
+                            Plan</button>
+                        <ul class="space-y-4 text-sm text-slate-600 dark:text-slate-400">
+                            <li class="flex items-center gap-3"><span
+                                    class="material-symbols-outlined text-primary text-xl">check_circle</span> Todo en
+                                Standard</li>
+                            <li class="flex items-center gap-3"><span
+                                    class="material-symbols-outlined text-primary text-xl">check_circle</span> Hasta 10
+                                Secciones</li>
+                            <li class="flex items-center gap-3"><span
+                                    class="material-symbols-outlined text-primary text-xl">check_circle</span>
+                                Optimización SEO Básica</li>
+                            <li class="flex items-center gap-3"><span
+                                    class="material-symbols-outlined text-primary text-xl">check_circle</span>
+                                Integración Redes Sociales</li>
+                            <li class="flex items-center gap-3"><span
+                                    class="material-symbols-outlined text-primary text-xl">check_circle</span> Blog /
+                                Noticias</li>
+                        </ul>
+                    </div>
+                    <!-- Premium Plan -->
+                    <div
+                        class="p-8 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl hover:shadow-lg transition-shadow">
+                        <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Premium</h3>
+                        <p class="text-slate-500 text-sm mb-6">Solución integral completa.</p>
+                        <div class="text-4xl font-bold text-slate-900 dark:text-white mb-6">$8.95<span
+                                class="text-lg font-normal text-slate-500">/mensual</span></div>
+                        <button
+                            class="w-full py-3 px-4 bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-900 dark:text-white font-bold rounded-lg transition-colors mb-8">Elegir
+                            Plan</button>
+                        <ul class="space-y-4 text-sm text-slate-600 dark:text-slate-400">
+                            <li class="flex items-center gap-3"><span
+                                    class="material-symbols-outlined text-green-500 text-xl">check_circle</span> Todo en
+                                Gold</li>
+                            <li class="flex items-center gap-3"><span
+                                    class="material-symbols-outlined text-green-500 text-xl">check_circle</span>
+                                E-Commerce Completo</li>
+                            <li class="flex items-center gap-3"><span
+                                    class="material-symbols-outlined text-green-500 text-xl">check_circle</span> SEO
+                                Avanzado &amp; Analítica</li>
+                            <li class="flex items-center gap-3"><span
+                                    class="material-symbols-outlined text-green-500 text-xl">check_circle</span> Soporte
+                                Prioritario 24/7</li>
+                            <li class="flex items-center gap-3"><span
+                                    class="material-symbols-outlined text-green-500 text-xl">check_circle</span>
+                                Mantenimiento 1 Año</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Contact Form Section -->
+        <section id="contact-form" class="py-20 bg-primary relative overflow-hidden">
+            <!-- Abstract Patterns for texture -->
+            <div class="absolute top-0 right-0 -mr-20 -mt-20 w-80 h-80 bg-white/10 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 bg-black/10 rounded-full blur-3xl"></div>
+            <div class="max-w-4xl mx-auto px-4 relative z-10">
+                <div class="text-center mb-10">
+                    <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Contáctanos</h2>
+                    <p class="text-blue-100 text-lg max-w-2xl mx-auto">Envíanos un mensaje y nos pondremos en contacto
+                        contigo lo antes posible.</p>
+                </div>
+
+                <div class="bg-white dark:bg-slate-900 rounded-2xl shadow-2xl p-8 md:p-10 mx-auto max-w-2xl">
+                    <form id="contactForm" class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="name"
+                                    class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">Nombre</label>
+                                <input type="text" id="name" name="name" required
+                                    class="w-full px-4 py-3 rounded-lg border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white focus:ring-2 focus:ring-primary focus:border-transparent transition-all outline-none"
+                                    placeholder="Tu nombre">
+                            </div>
+                            <div>
+                                <label for="email"
+                                    class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">Email</label>
+                                <input type="email" id="email" name="email" required
+                                    class="w-full px-4 py-3 rounded-lg border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white focus:ring-2 focus:ring-primary focus:border-transparent transition-all outline-none"
+                                    placeholder="tu@email.com">
+                            </div>
+                        </div>
+                        <div>
+                            <label for="message"
+                                class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">Mensaje</label>
+                            <textarea id="message" name="message" rows="4" required
+                                class="w-full px-4 py-3 rounded-lg border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white focus:ring-2 focus:ring-primary focus:border-transparent transition-all outline-none"
+                                placeholder="¿En qué podemos ayudarte?"></textarea>
+                        </div>
+                        <button type="submit" id="submitBtn"
+                            class="w-full bg-primary hover:bg-primary-dark text-white font-bold py-4 px-8 rounded-lg transition-all shadow-lg hover:shadow-primary/50 flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed">
+                            <span>Enviar Mensaje</span>
+                            <span class="material-symbols-outlined text-sm">send</span>
+                        </button>
+                    </form>
+                    <div id="formStatus" class="mt-4 hidden p-4 rounded-lg text-center text-sm font-medium"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-white pt-16 pb-8 border-t border-slate-800" id="contact">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <!-- Brand Info -->
+                <div class="col-span-1 md:col-span-2 lg:col-span-1">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-8 h-8 bg-primary rounded flex items-center justify-center text-white">
+                            <span class="material-symbols-outlined text-lg">rocket_launch</span>
+                        </div>
+                        <span class="text-xl font-bold">MarcApp</span>
+                    </div>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                        Agencia digital especializada en crear experiencias web únicas y estrategias de marketing
+                        efectivas para marcas ambiciosas.
+                    </p>
+                    <div class="flex gap-4">
+                        <a class="w-8 h-8 flex items-center justify-center rounded-full bg-slate-800 hover:bg-primary transition-colors text-slate-300 hover:text-white"
+                            href="javascript:void(0)">
+                            <svg aria-hidden="true" class="w-4 h-4" fill="currentColor" viewbox="0 0 24 24">
+                                <path
+                                    d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z">
+                                </path>
+                            </svg>
+                        </a>
+                        <a class="w-8 h-8 flex items-center justify-center rounded-full bg-slate-800 hover:bg-primary transition-colors text-slate-300 hover:text-white"
+                            href="javascript:void(0)">
+                            <svg aria-hidden="true" class="w-4 h-4" fill="currentColor" viewbox="0 0 24 24">
+                                <path
+                                    d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84">
+                                </path>
+                            </svg>
+                        </a>
+                        <a class="w-8 h-8 flex items-center justify-center rounded-full bg-slate-800 hover:bg-primary transition-colors text-slate-300 hover:text-white"
+                            href="javascript:void(0)">
+                            <svg aria-hidden="true" class="w-4 h-4" fill="currentColor" viewbox="0 0 24 24">
+                                <path clip-rule="evenodd"
+                                    d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.468 2.53c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"
+                                    fill-rule="evenodd"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <!-- Links 1 -->
+                <div>
+                    <h4 class="text-white font-bold mb-6">Servicios</h4>
+                    <ul class="space-y-3">
+                        <li><a class="text-slate-400 hover:text-primary transition-colors text-sm"
+                                href="javascript:void(0)">Diseño
+                                Web</a></li>
+                        <li><a class="text-slate-400 hover:text-primary transition-colors text-sm"
+                                href="javascript:void(0)">Desarrollo a
+                                Medida</a></li>
+                        <li><a class="text-slate-400 hover:text-primary transition-colors text-sm"
+                                href="javascript:void(0)">E-Commerce</a></li>
+                        <li><a class="text-slate-400 hover:text-primary transition-colors text-sm"
+                                href="javascript:void(0)">Marketing
+                                Digital</a></li>
+                        <li><a class="text-slate-400 hover:text-primary transition-colors text-sm"
+                                href="javascript:void(0)">SEO &amp;
+                                SEM</a></li>
+                    </ul>
+                </div>
+                <!-- Links 2 -->
+                <div>
+                    <h4 class="text-white font-bold mb-6">Compañía</h4>
+                    <ul class="space-y-3">
+                        <li><a class="text-slate-400 hover:text-primary transition-colors text-sm"
+                                href="javascript:void(0)">Sobre
+                                Nosotros</a></li>
+                        <li><a class="text-slate-400 hover:text-primary transition-colors text-sm"
+                                href="javascript:void(0)">Portafolio</a></li>
+                        <li><a class="text-slate-400 hover:text-primary transition-colors text-sm"
+                                href="javascript:void(0)">Carreras</a>
+                        </li>
+                        <li><a class="text-slate-400 hover:text-primary transition-colors text-sm"
+                                href="javascript:void(0)">Blog</a>
+                        </li>
+                        <li><a class="text-slate-400 hover:text-primary transition-colors text-sm"
+                                href="javascript:void(0)">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Contact -->
+                <div>
+                    <h4 class="text-white font-bold mb-6">Contacto</h4>
+                    <ul class="space-y-4">
+                        <!-- Address removed -->
+                        <li class="flex items-center gap-3 text-slate-400 text-sm">
+                            <span class="material-symbols-outlined text-primary text-xl">call</span>
+                            <span>+34 912 345 678</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-slate-400 text-sm">
+                            <span class="material-symbols-outlined text-primary text-xl">mail</span>
+                            <span>info@marcapp.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-slate-500 text-sm text-center md:text-left">
+                    © 2024 MarcApp Agencia Digital. Todos los derechos reservados.
+                </p>
+                <div class="flex gap-6 text-sm text-slate-500">
+                    <a class="hover:text-white transition-colors" href="javascript:void(0)">Privacidad</a>
+                    <a class="hover:text-white transition-colors" href="javascript:void(0)">Términos</a>
+                    <a class="hover:text-white transition-colors" href="javascript:void(0)">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+        import { getFirestore, collection, addDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyAQM_x6St1xQ-nfzlUciYIZGxsvky-62zA",
+            authDomain: "marcapp-5711e.firebaseapp.com",
+            projectId: "marcapp-5711e",
+            storageBucket: "marcapp-5711e.firebasestorage.app",
+            messagingSenderId: "1086198954247",
+            appId: "1:1086198954247:web:225b9f7498372929ee6da2"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+
+        // Handle Form Submission
+        const contactForm = document.getElementById('contactForm');
+        const formStatus = document.getElementById('formStatus');
+        const submitBtn = document.getElementById('submitBtn');
+        const submitBtnText = submitBtn.querySelector('span:first-child');
+        const submitBtnIcon = submitBtn.querySelector('.material-symbols-outlined');
+
+        contactForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            // UI Loading State
+            submitBtn.disabled = true;
+            submitBtnText.textContent = 'Enviando...';
+            submitBtnIcon.textContent = 'hourglass_empty';
+            submitBtnIcon.classList.add('animate-spin');
+
+            // Get Form Data
+            const formData = new FormData(contactForm);
+            const data = {
+                name: formData.get('name'),
+                email: formData.get('email'),
+                message: formData.get('message'),
+                createdAt: serverTimestamp()
+            };
+
+            try {
+                // Add to Firestore
+                await addDoc(collection(db, "messages"), data);
+
+                // Success Feedback
+                formStatus.textContent = '¡Mensaje enviado con éxito! Nos pondremos en contacto pronto.';
+                formStatus.classList.remove('hidden', 'bg-red-100', 'text-red-700');
+                formStatus.classList.add('bg-green-100', 'text-green-700');
+                contactForm.reset();
+            } catch (error) {
+                console.error("Error adding document: ", error);
+                // Error Feedback
+                formStatus.textContent = 'Hubo un error al enviar el mensaje. Inténtalo de nuevo.';
+                formStatus.classList.remove('hidden', 'bg-green-100', 'text-green-700');
+                formStatus.classList.add('bg-red-100', 'text-red-700');
+            } finally {
+                // Reset UI State
+                submitBtn.disabled = false;
+                submitBtnText.textContent = 'Enviar Mensaje';
+                submitBtnIcon.textContent = 'send';
+                submitBtnIcon.classList.remove('animate-spin');
+
+                // Clear success/error message after 5 seconds
+                setTimeout(() => {
+                    formStatus.classList.add('hidden');
+                }, 5000);
+            }
+        });
+    </script>
+</body>
+
+</html>
